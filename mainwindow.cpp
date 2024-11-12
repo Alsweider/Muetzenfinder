@@ -24,12 +24,11 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_plainTextEdit_textChanged()
 {
-    //Fehler: "weiß" mit Eszett am Ende wird nicht erkannt
     QRegularExpression farbenRegex(
-        "\\b(lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|"
+        "(lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|"
         "(weiss|weiß)[nmr]?|grau|braun|ocker[n]?|dunkelgrau[n]?|hellgrün[n]?|orange[n]?|flieder[n]?|"
         "blutrot[n]?|graubraun[n]?|fleischfarbe[n]?|cremefarbe[n]?)"
-        "(e[nmr]?|em|es)?\\b", QRegularExpression::CaseInsensitiveOption);
+        "(e[nmr]?|em|es)?", QRegularExpression::CaseInsensitiveOption);
 
     QString text = ui->plainTextEdit->toPlainText();
     QStringList gefundeneFarben;
