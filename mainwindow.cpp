@@ -26,7 +26,7 @@ void MainWindow::on_plainTextEdit_textChanged()
 {
     QRegularExpression farbenRegex(
         "\\b(lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|weiß|grau|braun|ocker[nm]*(e[nmr]?)?|"
-        "dunkelgrau(e[nmr]?)?|fleischfarbe(e[nmr]?)?|hellgrün(e[nmr]?)?|cremefarbe(e[nmr]?)?|orange([nmr]?)?|flieder|blutrot(e[nmr]?)?|graubraun|"
+        "dunkelgrau(e[nmr]?)?|fleischfarbe([nmr]?)?|hellgrün(e[nmr]?)?|cremefarbe([nmr]?)?|orange([nmr]?)?|flieder|blutrot(e[nmr]?)?|graubraun|"
         "lila(n|s)?|türkis(e[nmr]?)?|rot(e[nmr]?)?|blau(e[nmr]?)?|grün(e[nmr]?)?|violett(e[nmr]?)?|"
         "pink(e[nmr]?)?|gelb(e[nmr]?)?|cyan(e[nmr]?)?|schwarz(e[nmr]?)?|weiß(e[nmr]?)?|grau(e[nmr]?)?|"
         "braun(e[nmr]?)?)\\b", QRegularExpression::CaseInsensitiveOption);
