@@ -24,12 +24,12 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_plainTextEdit_textChanged()
 {
+    //Fehler: "weiß" mit Eszett am Ende wird nicht erkannt
     QRegularExpression farbenRegex(
-        "\\b(lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|weiß|grau|braun|ocker[nm]*(e[nmr]?)?|"
-        "dunkelgrau(e[nmr]?)?|fleischfarbe([nmr]?)?|hellgrün(e[nmr]?)?|cremefarbe([nmr]?)?|orange([nmr]?)?|flieder|blutrot(e[nmr]?)?|graubraun|"
-        "lila(n|s)?|türkis(e[nmr]?)?|rot(e[nmr]?)?|blau(e[nmr]?)?|grün(e[nmr]?)?|violett(e[nmr]?)?|"
-        "pink(e[nmr]?)?|gelb(e[nmr]?)?|cyan(e[nmr]?)?|schwarz(e[nmr]?)?|weiß(e[nmr]?)?|grau(e[nmr]?)?|"
-        "braun(e[nmr]?)?)\\b", QRegularExpression::CaseInsensitiveOption);
+        "\\b(lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|"
+        "(weiss|weiß)[nmr]?|grau|braun|ocker[n]?|dunkelgrau[n]?|hellgrün[n]?|orange[n]?|flieder[n]?|"
+        "blutrot[n]?|graubraun[n]?|fleischfarbe[n]?|cremefarbe[n]?)"
+        "(e[nmr]?|em|es)?\\b", QRegularExpression::CaseInsensitiveOption);
 
     QString text = ui->plainTextEdit->toPlainText();
     QStringList gefundeneFarben;
@@ -43,6 +43,7 @@ void MainWindow::on_plainTextEdit_textChanged()
     QString filteredText = gefundeneFarben.join("\n");
 
     ui->plainTextEdit_2->setPlainText(filteredText);
+
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -51,4 +52,7 @@ void MainWindow::on_pushButton_2_clicked()
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(textToCopy);
 }
+
+
+
 
