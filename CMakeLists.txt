@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Muetzenfinder VERSION 0.0.5 LANGUAGES CXX)
+project(Muetzenfinder VERSION 0.1.1 LANGUAGES CXX)
 
 # Setze die Versionsnummer
-set(PROJECT_VERSION "0.0.5")
+set(PROJECT_VERSION "0.1.1")
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)

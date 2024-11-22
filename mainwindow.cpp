@@ -84,12 +84,21 @@ void MainWindow::on_plainTextEdit_textChanged()
     htmlOutput += "</ol>";
     qDebug() << "Generated HTML:\n" << htmlOutput;
 
-     ui->plainTextEdit_2->setHtml(htmlOutput);
+    //Wenn kein Eingabetext vorhanden ist, wird das Listenfeld deaktiviert.
+    if (ui->plainTextEdit->toPlainText().trimmed().isEmpty()){
+        ui->textEditFarbliste->setEnabled(false);
+    } else {
+        //Listenfeld aktivieren
+        ui->textEditFarbliste->setEnabled(true);
+    }
+
+    //Ausgabe in Listenfeld setzen
+    ui->textEditFarbliste->setHtml(htmlOutput);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QString textToCopy = ui->plainTextEdit_2->toPlainText();
+    QString textToCopy = ui->textEditFarbliste->toPlainText();
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(textToCopy);
 }
