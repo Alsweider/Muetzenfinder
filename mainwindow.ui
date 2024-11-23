@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Mützenfinder</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="ressourcen.qrc">
+    <normaloff>:/bilder/icon.ico</normaloff>:/bilder/icon.ico</iconset>
+  </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
@@ -107,6 +111,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="ressourcen.qrc"/>
+ </resources>
  <connections/>
 </ui>

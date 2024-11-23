@@ -5,6 +5,9 @@ project(Muetzenfinder VERSION 0.1.1 LANGUAGES CXX)
 # Setze die Versionsnummer
 set(PROJECT_VERSION "0.1.1")
 
+# Icon .rc-Datei für das Windows-Icon der EXE
+set(WIN32_RESOURCE_FILE "${CMAKE_SOURCE_DIR}/app_icon.rc")
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -26,6 +29,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Muetzenfinder
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        ressourcen.qrc
+        ${WIN32_RESOURCE_FILE}  #Ressourcendatei hinzufügen für Icon
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Muetzenfinder APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -41,6 +47,7 @@ else()
     else()
         add_executable(Muetzenfinder
             ${PROJECT_SOURCES}
+            ${WIN32_RESOURCE_FILE}  #Ressourcendatei hinzufügen für Icon
         )
     endif()
 endif()

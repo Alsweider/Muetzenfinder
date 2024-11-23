@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include <QClipboard>
 #include <QRegularExpression>
+#include <QIcon>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,10 +42,14 @@ void MainWindow::on_plainTextEdit_textChanged()
         QString squareColor = "black"; //Standardfarbe
 
         // Farbe zuordnen
-        if (colorName.contains("rot", Qt::CaseInsensitive)) {
-            squareColor = "red";
-        } else if (colorName.contains("blau", Qt::CaseInsensitive)) {
-            squareColor = "blue";
+        if (colorName.contains("hellgrün", Qt::CaseInsensitive)) {
+            squareColor = "lime";
+        } else if (colorName.contains("dunkelgrau", Qt::CaseInsensitive)){
+            squareColor = "#a9a9a9";
+        } else if (colorName.contains("graubraun", Qt::CaseInsensitive)) {
+            squareColor = "#3D3635";
+        } else if (colorName.contains("blutrot", Qt::CaseInsensitive)){
+            squareColor = "#880000";
         } else if (colorName.startsWith("grün", Qt::CaseInsensitive)) {
             squareColor = "green";
         } else if (colorName.contains("gelb", Qt::CaseInsensitive)) {
@@ -57,8 +62,8 @@ void MainWindow::on_plainTextEdit_textChanged()
             squareColor = "black";
         } else if (colorName.contains("weiß", Qt::CaseInsensitive) || colorName.contains("weiss", Qt::CaseInsensitive)) {
             squareColor = "white";
-        } else if (colorName.contains("grau", Qt::CaseInsensitive)) {
-            squareColor = "gray";
+        } else if (colorName.endsWith("grau", Qt::CaseInsensitive)) {
+            squareColor = "#d3d3d3";
         } else if (colorName.contains("orange", Qt::CaseInsensitive)) {
             squareColor = "orange";
         } else if (colorName.contains("türkis", Qt::CaseInsensitive)) {
@@ -69,8 +74,14 @@ void MainWindow::on_plainTextEdit_textChanged()
             squareColor = "#cc7722";
         }  else if (colorName.contains("cyan", Qt::CaseInsensitive)) {
             squareColor = "cyan";
-        } else if (colorName.contains("hellgrün", Qt::CaseInsensitive)) {
-            squareColor = "lime";
+        } else if (colorName.contains("braun", Qt::CaseInsensitive)) {
+            squareColor = "brown";
+        } else if (colorName.contains("blau", Qt::CaseInsensitive)) {
+            squareColor = "blue";
+        } else if (colorName.contains("flieder", Qt::CaseInsensitive)){
+            squareColor = "#9f97fc";
+        } else if (colorName.contains("rot", Qt::CaseInsensitive)) {
+            squareColor = "red";
         }
 
         //HTML-Ausgabe mit farbigem Quadrat
