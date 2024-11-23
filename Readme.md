@@ -8,7 +8,7 @@ Den Text sollte man sich auf jeden Fall speichern, denn nach ein paar Tagen oder
 nach den Farben der Mützen erkundigt. Wenn man die richtigen Farben noch weiß, erhält man oft eine nette Belohnung. Die Farben im Text zu finden, 
 kann allerdings etwas lästig sein. Also habe ich einen kleinen Parser geschrieben, der die Farben herausfiltert und zu einer einfachen Liste macht.
 
-![2024-11-22 20_31_08-Mützenfinder](https://github.com/user-attachments/assets/b0a792f7-a1d1-4094-9234-88f67fdfacbb)
+![2024-11-23 22_23_05-Mützenfinder](https://github.com/user-attachments/assets/0ab1c20b-c664-4291-b4fa-8339aa3609fc)
 
 <a href="https://www.youtube-nocookie.com/embed/UFrNLG1U7Kg
 " target="_blank"><img src="http://img.youtube.com/vi/UFrNLG1U7Kg/0.jpg" 
