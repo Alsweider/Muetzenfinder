@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Muetzenfinder VERSION 0.1.1 LANGUAGES CXX)
+project(Muetzenfinder VERSION 0.1.2 LANGUAGES CXX)
 
 # Setze die Versionsnummer
-set(PROJECT_VERSION "0.1.1")
+set(PROJECT_VERSION "0.1.2")
 
 # Icon .rc-Datei für das Windows-Icon der EXE
 set(WIN32_RESOURCE_FILE "${CMAKE_SOURCE_DIR}/app_icon.rc")
