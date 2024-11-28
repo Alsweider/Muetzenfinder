@@ -2,7 +2,6 @@
 #include "./ui_mainwindow.h"
 #include <QClipboard>
 #include <QRegularExpression>
-#include <QIcon>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,8 +25,8 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_plainTextEdit_textChanged()
 {
     QRegularExpression farbenRegex(
-        "(graubraun|dunkelgrau|hellgrün|blutrot|fleischfarbe|cremefarbe[n]?|"
-        "lila|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|"
+        "(graubraun|dunkelgrau|hellgrün|blutrot|fleischfarbe[n]?|cremefarbe[n]?|"
+        "lila[n]?|türkis|rot|blau|grün|violett|pink|gelb|cyan|schwarz|"
         "(weiss|weiß)[nmr]?|grau|braun|ocker[n]?|orange[n]?|flieder[n]?)"
         "(e[nmr]?|em|es)?", QRegularExpression::CaseInsensitiveOption);
 
@@ -47,27 +46,27 @@ void MainWindow::on_plainTextEdit_textChanged()
         } else if (colorName.contains("cremefarbe", Qt::CaseInsensitive)){
             squareColor = "#F8DB83"; //colLtBrown
         } else if (colorName.contains("dunkelgrau", Qt::CaseInsensitive)){
-            squareColor = "#a9a9a9";
+            squareColor = "#999999"; //colLtBlack
         } else if (colorName.contains("graubraun", Qt::CaseInsensitive)) {
             squareColor = "#6b563f"; //colDkBrown
         } else if (colorName.contains("blutrot", Qt::CaseInsensitive)){
-            squareColor = "#880000";
+            squareColor = "#B00000"; //colDkRed
         } else if (colorName.contains("fleischfarbe", Qt::CaseInsensitive)){
             squareColor = "#FA8072"; //colsalmon
         } else if (colorName.startsWith("grün", Qt::CaseInsensitive)) {
-            squareColor = "green";
+            squareColor = "#00FF00"; //colLtGreen
         } else if (colorName.contains("gelb", Qt::CaseInsensitive)) {
             squareColor = "#FFFF00"; //colLtYellow
         } else if (colorName.contains("violett", Qt::CaseInsensitive) || colorName.contains("lila", Qt::CaseInsensitive)) {
             squareColor = "#B000CC"; //colDkMagenta
         } else if (colorName.contains("pink", Qt::CaseInsensitive)) {
-            squareColor = "pink";
+            squareColor = "#FF00FF"; //colLtMagenta
         } else if (colorName.contains("schwarz", Qt::CaseInsensitive)) {
             squareColor = "#000000"; //colBlack
         } else if (colorName.contains("weiß", Qt::CaseInsensitive) || colorName.contains("weiss", Qt::CaseInsensitive)) {
             squareColor = "#FFFFFF"; //colLtWhite
         } else if (colorName.endsWith("grau", Qt::CaseInsensitive)) {
-            squareColor = "#d3d3d3";
+            squareColor = "#B0B0B0"; //colDkWhite
         } else if (colorName.contains("orange", Qt::CaseInsensitive)) {
             squareColor = "#FF9900"; //colLtOrange
         } else if (colorName.contains("türkis", Qt::CaseInsensitive)) {
@@ -75,7 +74,7 @@ void MainWindow::on_plainTextEdit_textChanged()
         } else if (colorName.contains("creme", Qt::CaseInsensitive)) {
             squareColor = "#FFFDD0";
         } else if (colorName.contains("ocker", Qt::CaseInsensitive)) {
-            squareColor = "#cc7722";
+            squareColor = "#B0B000"; //colDkYellow
         }  else if (colorName.contains("cyan", Qt::CaseInsensitive)) {
             squareColor = "cyan";
         } else if (colorName.contains("braun", Qt::CaseInsensitive)) {
@@ -173,6 +172,29 @@ void MainWindow::on_pushButton_2_clicked()
 // .trhilight 		{ background-color:#005757; }
 // .trdark 		{ background-color:#001410; }
 
-
+// Existierende Zwergmützen-Farben:
+// <select name="guess[]">
+// <option value="" selected'="">weiß nicht</option>
+// <option value="rot">rot</option>
+// <option value="blau">blau</option>
+// <option value="grün">grün</option>
+// <option value="gelb">gelb</option>
+// <option value="cremefarben">cremefarben</option>
+// <option value="pink">pink</option>
+// <option value="violett">violett</option>
+// <option value="cyan">cyan</option>
+// <option value="schwarz">schwarz</option>
+// <option value="weiß">weiß</option>
+// <option value="ockern">ockern</option>
+// <option value="grau">grau</option>
+// <option value="orangen">orangen</option>
+// <option value="braun">braun</option>
+// <option value="hellgrün">hellgrün</option>
+// <option value="fliedern">fliedern</option>
+// <option value="blutrot">blutrot</option>
+// <option value="graubraun">graubraun</option>
+// <option value="dunkelgrau">dunkelgrau</option>
+// <option value="fleischfarben">fleischfarben</option>
+// </select>
 
 
