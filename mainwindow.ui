@@ -20,9 +20,6 @@
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
-  <property name="autoFillBackground">
-   <bool>true</bool>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
