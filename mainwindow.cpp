@@ -82,7 +82,7 @@ void MainWindow::on_plainTextEdit_textChanged()
         } else if (colorName.contains("blau", Qt::CaseInsensitive)) {
             squareColor = "#0000B0"; //colDkBlue
         } else if (colorName.contains("flieder", Qt::CaseInsensitive)){
-            squareColor = "#9f97fc";
+            squareColor = "#9A5BEE"; //colblueviolet
         } else if (colorName.contains("rot", Qt::CaseInsensitive)) {
             squareColor = "red";
         }
