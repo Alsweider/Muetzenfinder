@@ -72,11 +72,11 @@ void MainWindow::on_plainTextEdit_textChanged()
         } else if (colorName.contains("türkis", Qt::CaseInsensitive)) {
             squareColor = "turquoise";
         } else if (colorName.contains("creme", Qt::CaseInsensitive)) {
-            squareColor = "#FFFDD0";
+            squareColor = "#F8DB83"; //colLtBrown
         } else if (colorName.contains("ocker", Qt::CaseInsensitive)) {
             squareColor = "#B0B000"; //colDkYellow
         }  else if (colorName.contains("cyan", Qt::CaseInsensitive)) {
-            squareColor = "cyan";
+            squareColor = "#00FFFF"; //colLtCyan
         } else if (colorName.contains("braun", Qt::CaseInsensitive)) {
             squareColor = "#994400"; //colDkOrange
         } else if (colorName.contains("blau", Qt::CaseInsensitive)) {
